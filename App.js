@@ -1,24 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, FlatList, Modal } from 'react-native';
+import uuid from 'react-native-uuid';
 
 const App = () => {
 
-  const {newItem, setNewItem} = useState("")
-  const {list, setList} = useState([])
+  const [newItem, setNewItem] = useState("")
+  const [list, setList] = useState([])
+  const [modalVisible, setModalVisible] = useState(false)
+  const [itemSelected, setItemSelected] = useState ({})
+
 
   const handleAddItem = () => {
-    setList (current => [...current,{nombre:newItem}])
+    const newProducto = {
+    id:uuid.v4(),
+    title: setNewItem
+    }
+    setList (current => [...current,newProducto])
     setNewItem("")
     console.log(list)
   }
 
-  return <View style={styles.container}>
+  const handleModalEliminar = (item) => {
+      setItemSelected(item)
+      setModalVisible(true)
+  }
+  
+  const handleEliminar = () => {
+    setList(current => current.filter(product => product.id !== itemSelected.id))
+    setModalVisible(false)
+  }
+
+  return (<View style={styles.container}>
 
 
       <View style={styles.InputContainer}>
        <TextInput style={styles.Input}
        placeholder='Nombre de la criatura'
+       value= {newItem}
        onChangeText={(t)=> setNewItem(t)}
        />
       
@@ -27,30 +46,32 @@ const App = () => {
 
 
       <View style={styles.contenedorLista}>
-          <View style={styles.itemLista}>
-            <Text style={styles.TextLista}>Therizinosaurus</Text>
-            <Text style={styles.TextLista}>Hervivoro</Text>
-            <Button title='   -   '/>
-          </View>
+          <FlatList 
 
-          <View style={styles.itemLista}>
-            <Text style={styles.TextLista}>Dilophosaurus</Text>
-            <Text style={styles.TextLista}>Carnivoro</Text>
-            <Button title='   -   '/>
-          </View>
-
-          <View style={styles.itemLista}>
-            <Text style={styles.TextLista}>Tyrannosaurus</Text>
-            <Text style={styles.TextLista}>Carnivoro</Text>
-            <Button title='   -   '/>
-          </View>
-
+            data={list}
+            keyExtractor={item => item.id}
+            renderItem={({item}) => <View style={styles.itemLista}>
+                                        <Text style={styles.TextLista}>{item.title}</Text>
+                                        <Button title='   -   ' onPress={() => handleModalEliminar(item)}/>
+                                        
+                                        </View>
+            }
           
+          />   
       </View>
       <Text style={styles.Text}>Proyecto Planeta Paleontologico - By Isaias Ramirez</Text>
+
+
+
+      <Modal visible={modalVisible}>
+        <Text>¿Seguro de que quieres eliminar a {newItem} de tu enciclopedia?</Text>
+        <Button title='Aceptar' onPress={() => handleEliminar}/>
+        <Button title='Cancelar' onPress={() => setModalVisible(false)}/>
+
+      </Modal>
       <StatusBar style="auto" />
     </View>
-  ;
+  );
 }
 
 const styles = StyleSheet.create({
