@@ -12,10 +12,13 @@ const App = () => {
 
 
   const handleAddItem = () => {
+    
     const newProducto = {
     id:uuid.v4(),
-    title: setNewItem
+    title: setNewItem,
+    
     }
+    
     setList (current => [...current,newProducto])
     setNewItem("")
     console.log(list)
@@ -64,7 +67,7 @@ const App = () => {
 
 
       <Modal visible={modalVisible}>
-        <Text>¿Seguro de que quieres eliminar a {newItem} de tu enciclopedia?</Text>
+        <Text>¿Seguro de que quieres eliminar a {itemSelected.title} de tu enciclopedia?</Text>
         <Button title='Aceptar' onPress={() => handleEliminar}/>
         <Button title='Cancelar' onPress={() => setModalVisible(false)}/>
 
