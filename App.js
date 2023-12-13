@@ -66,9 +66,9 @@ const App = () => {
 
 
 
-      <Modal visible={modalVisible}>
-        <Text>¿Seguro de que quieres eliminar a {itemSelected.title} de tu enciclopedia?</Text>
-        <Button title='Aceptar' onPress={() => handleEliminar}/>
+      <Modal visible={modalVisible} style={styles.Modal}>
+        <Text style={styles.TextModal} >¿Seguro de que quieres eliminar a {itemSelected.title} de tu enciclopedia?</Text>
+        <Button style={styles.Button} title='Aceptar' onPress={() => handleEliminar}/>
         <Button title='Cancelar' onPress={() => setModalVisible(false)}/>
 
       </Modal>
@@ -129,6 +129,21 @@ const styles = StyleSheet.create({
     marginTop:20,
     color:"#121711",
     justifyContent:"flex-end",
+  },
+  TextModal:{
+    marginTop:5,
+    color:"#B1DAD1",
+    width:"60%"
+  },
+  Modal: {
+    width:"80%",
+    backgroundColor:"#58B09C",
+    margin:20,
+    
+  },
+  Button: {
+    width:"50%"
+
   }
 });
 
