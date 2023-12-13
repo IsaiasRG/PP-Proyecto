@@ -1,0 +1,32 @@
+[
+    {"id": 1,
+    "title": "Therizinosaurus",
+    "significado":"Lagarto con güadaña",
+    "epoca":"Cretacico Superior",
+    "dieta": "Hervivoro",
+    "peso": "5,000 kg",
+    "longitud": "Hasta 9 mts de largo",
+    "altura": "Hasta 5 mts de alto"
+},
+
+{"id": 2,
+    "title": "Dilophosaurus",
+    "significado":"Lagarto de dos crestas de John Wetherill",
+    "epoca":"Jurasico Inferior",
+    "dieta": "Carnivoro",
+    "peso": "400 kg",
+    "l": "Hasta 7 mts de largo",
+    "altura": "Hasta 3 mts de alto"
+},
+
+{"id": 3,
+    "title": "Tyrannosaurus Rex",
+    "significado":"Rey Lagarto Tirano",
+    "epoca":"Cretacico Superior",
+    "dieta": "Carnivoro",
+    "peso": "9,000 kg",
+    "longitud": "Hasta 13 mts de largo",
+    "altura": "Hasta 4 mts de alto"
+}
+
+]
