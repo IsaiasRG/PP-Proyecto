@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View, Button, FlatList, Modal } from 'react-native';
 import uuid from 'react-native-uuid';
+import ModalDelete from '../src/components/Modal';
 
 const App = () => {
 
@@ -64,14 +65,9 @@ const App = () => {
       </View>
       <Text style={styles.Text}>Proyecto Planeta Paleontologico - By Isaias Ramirez</Text>
 
+      <ModalDelete />
 
-
-      <Modal visible={modalVisible}>
-        <Text>¿Seguro de que quieres eliminar a {itemSelected.title} de tu enciclopedia?</Text>
-        <Button title='Aceptar' onPress={() => handleEliminar}/>
-        <Button title='Cancelar' onPress={() => setModalVisible(false)}/>
-
-      </Modal>
+     
       <StatusBar style="auto" />
     </View>
   );
