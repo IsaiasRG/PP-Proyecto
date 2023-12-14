@@ -1,12 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { colors } from './src/Global/colors';
 import Home from './src/screen/Home';
+import { useState } from 'react';
+import {useFonts} from "expo-font"
+import { fonts } from './src/Global/fonts';
+
 
 const App = () => {
 
+  const [categorySelected, setCategorySelected] = useState("")
+  const [fontsLoaded] = useFonts({Josefina: require ("./assets/Fonts/static/JosefinSans-Italic.ttf")});
+  if(!fontsLoaded) return null
+
   return (
          <View style={styles.container}>
-            <Home />
+          
+            <Home setCategorySelected={setCategorySelected}/>
          </View>
   )
   

@@ -1,7 +1,10 @@
 export const colors = {
-    color1:"#472C1B",
-    color2:"#1B4C1A",
-    color3:"#E49273",
-    letra1:"#C6D8D3",
-    letra2:"#69747C"
+    color1:"#38502A",
+    color2:"#272727",
+    color3:"#3D3522",
+    letra1:"#AAC5BD",
+    letra2:"#121711"
 }
+
+
+//  #AAC5BD

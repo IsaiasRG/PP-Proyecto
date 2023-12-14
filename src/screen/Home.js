@@ -4,12 +4,12 @@ import Categorias from '../components/Categorias'
 
 
 
-const Home = () => {
+const Home = ({setCategorySelected}) => {
   return (
     <>
 
     <Header title="Secciones"/>
-    <Categorias />
+    <Categorias setCategorySelected={setCategorySelected}/>
 
     </>
   )
@@ -18,5 +18,6 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
+
     
 })

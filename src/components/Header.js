@@ -15,7 +15,7 @@ export default Header
 const styles = StyleSheet.create({
     containerHeader:{
         width:"100%",
-        marginTop:40,
+        paddingTop:40,
         height:90,
         backgroundColor:colors.color1,
         justifyContent:"center",
