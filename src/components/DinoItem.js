@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { colors } from '../Global/colors'
 
 const DinoItem = (item) => {
   return (
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     },
 
     TextDino:{
-        color:"#AAC5BD",
+        color:colors.letra1,
         
       }
 

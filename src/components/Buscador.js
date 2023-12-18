@@ -1,21 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
+import { View } from 'react-native'
+import React, { useState } from 'react'
+import { Pressable, TextInput, StyleSheet} from 'react-native'
 import { FontAwesome, AntDesign } from '@expo/vector-icons';
+import { colors } from '../Global/colors';
 
-const Buscador = () => {
+const Buscador = ({setKeyword}) => {
+
+  const [input, setInput] = useState("")
+
   return (
     <View style={styles.container}>
-       <Pressable>
-        <TextInput>
+      <TextInput style={styles.TextInput} placeholder='Buscar' value={input} onChangeText={(t) => setInput(t)}/>
+
+       <Pressable onPress={()=> setKeyword(input)}>
         <FontAwesome name="search" size={24} color="black" />
-        </TextInput>
         </Pressable>
 
-        <Pressable>
-        <TextInput>
+        <Pressable onPress={()=> setInput("")}>
         <AntDesign name="closecircle" size={24} color="black" />
-        </TextInput>
         </Pressable>
     </View>
   )
@@ -27,7 +29,17 @@ const styles = StyleSheet.create({
 
     container:{
         flex:1,
-        justifyContent:"center",
-        alignItems:"center"
+        flexDirection:"row",
+        alignItems:"center",
+        gap:10
+    },
+    TextInput:{
+      backgroundColor: colors.color3,
+      width:"65%",
+      paddingHorizontal:10,
+      paddingVertical:5,
+      margin:10
+
     }
+    
 })
