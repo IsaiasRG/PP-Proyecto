@@ -1,4 +1,4 @@
-import { FlatList, View } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import Buscador from '../components/Buscador';
 import Header from '../components/Header';
 import criaturas from "../Data/dinos.json"
@@ -33,8 +33,4 @@ const ItemListCategory = () => {
 
 export default ItemListCategory
 
-const styles = StyleSheet.create({
-
-
-    
-})
+const styles = StyleSheet.create({})

@@ -10,7 +10,7 @@ import ItemListCategory from './src/screen/ItemListCategory';
 const App = () => {
 
   const [categorySelected, setCategorySelected] = useState("")
-  const [fontsLoaded] = useFonts({Josefina: require ("./assets/Fonts/static/JosefinSans-Italic.ttf")});
+  const [fontsLoaded] = useFonts({Josefina: require ("./assets/Fonts/JosefinSans-Italic.ttf")});
   if(!fontsLoaded) return null
 
   return (

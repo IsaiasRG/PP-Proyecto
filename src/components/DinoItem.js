@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../Global/colors'
 
-const DinoItem = (item) => {
+const DinoItem = ({item}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.TextDino}>{item.title}</Text>
@@ -20,13 +20,13 @@ const styles = StyleSheet.create({
     container:{
         marginTop:20,
         paddingVertical:30,
-        backgroundColor:"#3D3522",
+        backgroundColor:colors.color3,
         paddingHorizontal:"20%"
 
     },
 
     TextDino:{
-        color:colors.letra1,
+        color:colors.letra2,
         
       }
 

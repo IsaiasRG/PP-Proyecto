@@ -1,7 +1,6 @@
-import { View } from 'react-native'
-import React, { useState } from 'react'
-import { Pressable, TextInput, StyleSheet} from 'react-native'
+import { Pressable, TextInput, StyleSheet, View} from 'react-native'
 import { FontAwesome, AntDesign } from '@expo/vector-icons';
+import React, { useState } from 'react'
 import { colors } from '../Global/colors';
 
 const Buscador = ({setKeyword}) => {

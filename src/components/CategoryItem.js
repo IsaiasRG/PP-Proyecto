@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { colors } from '../Global/colors'
 
 const CategoryItem = ({categorias, setCategorySelected}) => {
   return (
@@ -18,13 +19,13 @@ const styles = StyleSheet.create({
     container:{
         marginTop:20,
         paddingVertical:30,
-        backgroundColor:"#3D3522",
+        backgroundColor:colors.color3,
         paddingHorizontal:"20%"
 
     },
 
     TextLista:{
-        color:"#AAC5BD",
+        color:colors.letra2,
         
       }
 })

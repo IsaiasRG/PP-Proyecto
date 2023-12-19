@@ -18,6 +18,6 @@ const Home = ({setCategorySelected}) => {
 export default Home
 
 const styles = StyleSheet.create({
-
+    
     
 })
