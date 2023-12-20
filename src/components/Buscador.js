@@ -27,17 +27,21 @@ export default Buscador
 const styles = StyleSheet.create({
 
     container:{
-        flex:1,
+        width:"100%",
         flexDirection:"row",
         alignItems:"center",
-        gap:10
+        padding:10,
+        gap:10,
+        backgroundColor:colors.color1
     },
     TextInput:{
-      backgroundColor: colors.color3,
+      backgroundColor: colors.color2,
+      color:colors.color1,
+      border:1,
       width:"65%",
       paddingHorizontal:10,
       paddingVertical:5,
-      margin:10
+      margin:5
 
     }
     

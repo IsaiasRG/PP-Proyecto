@@ -1,9 +1,9 @@
 export const colors = {
-    color1:"#302F4D",
+    color1:"#302F4D", 
     color2:"#BFD7EA",
     color3:"#BB9457",
     letra1:"#BFD7EA",
-    letra2:"#78290F"
+    letra2:"#78290F",
 }
 
 
