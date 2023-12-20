@@ -4,6 +4,7 @@ import Home from './src/screen/Home';
 import { useState } from 'react';
 import {useFonts} from "expo-font"
 import ItemListCategory from './src/screen/ItemListCategory';
+import { StatusBar } from 'expo-status-bar';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
   if(!fontsLoaded) return null
 
   return (
+    <StatusBar style={styles.bar}>
          <View style={styles.container}>
           {categorySelected ?
           <ItemListCategory categorias = {categorySelected} setCategorySelected={setCategorySelected} />
@@ -22,11 +24,15 @@ const App = () => {
           
             
          </View>
+    </StatusBar>
   )
   
 }
 
 const styles = StyleSheet.create({
+  bar:{
+    backgroundColor: colors.statusbar1
+  },
     container:{
       flex:1,
       backgroundColor: colors.color2,

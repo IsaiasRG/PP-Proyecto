@@ -4,6 +4,7 @@ export const colors = {
     color3:"#BB9457",
     letra1:"#BFD7EA",
     letra2:"#78290F",
+    statusbar1:"#121711"
 }
 
 
