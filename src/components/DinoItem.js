@@ -1,15 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../Global/colors'
 
-const DinoItem = ({item}) => {
+const DinoItem = ({item, navigation, routes}) => {
   return (
-    <View style={styles.container}>
+    <View>
+      <Pressable style={styles.container} onPres={() => navigation.navigate("Elemento", {id:item.id})} >
       <Text style={styles.TextDino}>{item.title}</Text>
       <Text style={styles.TextDino}>{item.epoca}</Text>
       <Text style={styles.TextDino}>{item.dieta}</Text>
       <Text style={styles.TextDino}>{item.longitud}</Text>
       <Text style={styles.TextDino}>{item.altura}</Text>
+
+      </Pressable>
     </View>
   )
 }

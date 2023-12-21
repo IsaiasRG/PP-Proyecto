@@ -1,15 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
-import Header from '../components/Header'
 import Categorias from '../components/Categorias'
 
 
 
-const Home = ({setCategorySelected}) => {
+const Home = ({navigation, routes}) => {
   return (
     <>
 
-    <Header title="Secciones"/>
-    <Categorias setCategorySelected={setCategorySelected}/>
+    <Categorias navigation={navigation} routes={routes} />
 
     </>
   )

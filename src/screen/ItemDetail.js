@@ -1,10 +1,20 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
+import {dinos} from "../Data/dinos.json"
 
-const ItemDetail = () => {
+const ItemDetail = ({routes}) => {
+
+  const [product, setProduct] = ([])
+  const {id} = routes.params
+
+  useEffect (() => {
+    const encontrarProducto = dinos.find(product => product.id === id)
+    setProduct(encontrarProducto)
+  }, {id})
+
   return (
     <View style={styles.container}>
-      <Text>ItemDetail</Text>
+      <Text>Contenido a rellenar</Text>
     </View>
   )
 }
