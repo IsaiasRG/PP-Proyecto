@@ -8,7 +8,7 @@ import ItemListCategory from '../screen/ItemListCategory';
 const Stack = createNativeStackNavigator();
 
 
-const EnciclopediaStack = () => {
+const MenuStack = () => {
   return (
     <Stack.Navigator
     initialRouteName='Home'
@@ -32,6 +32,6 @@ const EnciclopediaStack = () => {
   )
 }
 
-export default EnciclopediaStack
+export default MenuStack
 
 const styles = StyleSheet.create({})
