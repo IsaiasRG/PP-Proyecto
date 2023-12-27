@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import {dinos} from "../Data/dinos.json"
@@ -28,3 +29,4 @@ const styles = StyleSheet.create({
         alignItems:"center"
     }
 })
+

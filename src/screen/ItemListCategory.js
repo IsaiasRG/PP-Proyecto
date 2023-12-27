@@ -1,3 +1,4 @@
+
 import { FlatList, Pressable, StyleSheet, Text } from 'react-native';
 import Buscador from '../components/Buscador';
 import criaturas from "../Data/dinos.json"
