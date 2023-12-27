@@ -1,39 +1,18 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '../screen/Home';
-import Header from "../components/Header"
-import ItemListCategory from '../screen/ItemListCategory';
+import EnciclopediaStack from './EnciclopediaStack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-
-const Stack = createNativeStackNavigator();
-
+const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
   return (
     
     <NavigationContainer>
-
-    <Stack.Navigator
-        initialRouteName='Home'
-        screenOptions={
-            ({routes}) => {
-                return {
-                    header : () => <Header title= {
-                            routes.name === "Home" ? "Categorias" :
-                            routes.name === "Categorias" ? "Criaturas" :
-                            "Biografia"
-                    } />
-                }
-            }
-        }       
-    >
-
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="ItemList" component={ItemListCategory} />
-
-    </Stack.Navigator>
-
- </NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Enciclopedia" component={EnciclopediaStack} />
+        <Tab.Screen name="Noticias" component={NoticiasStack} />
+    </Tab.Navigator>
+    </NavigationContainer>
   )
 }
 
