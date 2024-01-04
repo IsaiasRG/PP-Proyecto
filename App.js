@@ -3,7 +3,8 @@ import { colors } from './src/Global/colors';
 import {useFonts} from "expo-font"
 import { StatusBar } from 'expo-status-bar';
 import Navigation from './src/Navigation/Navigation';
-
+import { store } from './app/store'
+import { Provider } from 'react-redux'
 
 
 const App = () => {
@@ -15,7 +16,11 @@ const App = () => {
     <View style={styles.container}>
 
            <StatusBar style={styles.bar}/>
+           <Provider store={store}>
+            
             <Navigation />
+
+           </Provider>,
 
     </View>
   

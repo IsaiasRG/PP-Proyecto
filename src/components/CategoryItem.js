@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../Global/colors'
 
-const CategoryItem = ({categorias, navigation, routes}) => {
+const CategoryItem = ({categorias, navigation, route}) => {
   return (
     <Pressable onPress={() => navigation.navigate("Categorias", {categorias})}>
       <View style={styles.container}>

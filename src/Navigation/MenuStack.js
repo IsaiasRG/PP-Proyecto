@@ -13,11 +13,11 @@ const MenuStack = () => {
     <Stack.Navigator
     initialRouteName='Home'
     screenOptions={
-        ({routes}) => {
+        ({route}) => {
             return {
                 header : () => <Header title= {
-                        routes.name === "Home" ? "Categorias" :
-                        routes.name === "Categorias" ? "Criaturas" :
+                        route.name === "Home" ? "Categorias" :
+                        route.name === "Categorias" ? "Criaturas" :
                         "Biografia"
                 } />
             }

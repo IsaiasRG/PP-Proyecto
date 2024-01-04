@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../Global/colors'
 
-const DinoItem = ({item, navigation, routes}) => {
+const DinoItem = ({item, navigation, route}) => {
   return (
     <View>
       <Pressable style={styles.container} onPres={() => navigation.navigate("Elemento", {id:item.id})} >
