@@ -1,10 +1,11 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { colors } from './src/Global/colors';
 import {useFonts} from "expo-font"
 import { StatusBar } from 'expo-status-bar';
 import Navigation from './src/Navigation/Navigation';
-import { store } from './app/store'
+import { store } from './src/app/store'
 import { Provider } from 'react-redux'
+import Home from './src/screen/Home';
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
 
            <StatusBar style={styles.bar}/>
            <Provider store={store}>
-            
+            <Home />
             <Navigation />
 
            </Provider>,

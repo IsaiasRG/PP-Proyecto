@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
 import categorias from "../Data/categorias.json"
 import CategoryItem from './CategoryItem'
 import { colors } from '../Global/colors'
