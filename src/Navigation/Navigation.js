@@ -35,6 +35,14 @@ const Navigation = () => {
           options={{
             tabBarIcon: () => <TabIcon icon="newspaper-outline" text="Noticias" />
           }} />
+
+        <Tab.Screen
+         name="PerfilStack"
+          component={NoticiasStack}
+          options={{
+            tabBarIcon: () => <TabIcon icon="user-tie" text="Perfil" />
+          }} />
+
     </Tab.Navigator>
     </NavigationContainer>
   )
